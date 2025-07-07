@@ -1,0 +1,68 @@
+
+body {
+   font-family: 'Courier New', monospace;
+   background-color: #3B3030;
+   color: #eee;
+   line-height: 1.6;
+}
+
+
+.blog {
+   margin: auto;
+   max-width: 800px;
+}
+
+
+h1 {
+   font-size: 50px;
+   font-weight: 300;
+   color: #FFF0D1;
+   text-align: center;
+}
+
+
+.card {
+   padding: 20px;
+   margin-bottom: 30px;
+   background-color: #795757;
+   text-align: center;
+}
+
+
+a {
+ text-decoration: none;
+ color: #FFF0D1;
+}
+form{
+    background-color:#3B3030;
+    padding: 30px;
+    border-radius:10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+    margin:auto;
+    max-width:500px;
+}
+input,textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #795757;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+button{
+    background-color:#2196F3;
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons{
+    text-align:right;
+    margin-right:50px;
+}
+.btn{
+color:gray;
+text-decoration:none;
+margin-right:15px;
+}
