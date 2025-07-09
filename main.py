@@ -20,12 +20,12 @@ def hello_world():
         }]}
     return render_template('blog.html',**context)
 
-@app.route('/<answer>/')
-def game(answer):
-    if answer.lower() == 'yes':
-        return 'write the number'
-    else:
-        return 'ok'
+#@app.route('/<answer>/')
+#def game(answer):
+#    if answer.lower() == 'yes':
+#        return 'write the number'
+#    else:
+#        return 'ok'
 
 @app.route('/yes/<number>/')
 def say_number(number):
@@ -35,7 +35,7 @@ def say_number(number):
 def hello_platon():
     return 'Hi,Platon'
 
-@app.route("/bye/")
+@app.route("/bye/#")
 def bye():
     return "Pokakis"
 

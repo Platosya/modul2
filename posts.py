@@ -32,6 +32,13 @@ def add_post():
         connection.commit()
         return redirect (url_for('index'))
     return render_template('addpost.html')
+@app.route('/post/<post_id>')
+def post(post_id):
+    result = cursor.execute(
+        'SELECT (id,title,content) FROM post WHERE id=?',(post_id,)
+    ).fetchone()
+    post_dict={'id':result[0],'title':result[1],'content':result[2]}
+    return render_template('post.html',post=post_dict)
 
 if __name__ == '__main__':
     app.run()
