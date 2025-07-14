@@ -3,6 +3,20 @@ import sqlite3
 app = Flask(__name__)
 connection = sqlite3.connect('db.db', check_same_thread=False)
 cursor = connection.cursor()
+cursor.execute('''CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL
+ );
+
+CREATE TABLE posts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  content TEXT NOT NULL,
+  user_id INTEGER
+  )''')
+
+connection.commit()
 def close_db(connection=None):
     if connection is not None:
         connection.close()

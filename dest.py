@@ -7,5 +7,6 @@ print(post)
 # cursor.execute('''INSERT into post(title,content) values
 #   ('arbuz', 'ya lublu arbuzi'),
 #   ('mandarinka','ya lubly mandarinki')''')
+
 # connection.commit()
 connection.close()
